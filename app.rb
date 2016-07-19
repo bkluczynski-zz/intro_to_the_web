@@ -22,5 +22,6 @@ get '/testing' do
 end
 
 get '/cat' do
+  @name_sampler = %w(Amigo Oscar Viking Arunas Bart).sample
   erb(:index)
 end

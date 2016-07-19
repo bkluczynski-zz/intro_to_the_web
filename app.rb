@@ -21,7 +21,13 @@ get '/testing' do
   "just another test!"
 end
 
-get '/cat' do
+get '/random-cat' do
   @name_sampler = %w(Amigo Oscar Viking Arunas Bart).sample
+  erb(:index)
+end
+
+get '/named-cat' do
+  p params
+  @name_sampler = params[:name]
   erb(:index)
 end
